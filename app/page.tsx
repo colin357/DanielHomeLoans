@@ -1,8 +1,17 @@
 import Image from "next/image";
+import MortgageCalculator from "./components/MortgageCalculator";
+import FAQAccordion from "./components/FAQAccordion";
+import StickyContact from "./components/StickyContact";
+import SocialProof from "./components/SocialProof";
+import ProcessTimeline from "./components/ProcessTimeline";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      {/* Sticky Components */}
+      <StickyContact />
+      <SocialProof />
       {/* Header */}
       <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -125,6 +134,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Process Timeline Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-emerald-50 rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+              Your Path to Homeownership
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Simple, transparent, and designed to get you into your dream home faster
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary-green to-emerald-600 mx-auto rounded-full mt-6"></div>
+          </div>
+          <ProcessTimeline />
+        </div>
+      </section>
+
       {/* About Me Section */}
       <section id="about" className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary-green/5 rounded-full blur-3xl"></div>
@@ -209,6 +235,57 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Mortgage Calculator Section */}
+      <section className="py-24 bg-gradient-to-br from-primary-green/5 via-emerald-50 to-white relative overflow-hidden">
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-green/10 rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+              Calculate Your Monthly Payment
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get an instant estimate of your monthly mortgage payment
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary-green to-emerald-600 mx-auto rounded-full mt-6"></div>
+          </div>
+          <MortgageCalculator />
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+              What My Clients Say
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Real stories from real homeowners who trusted me with their dreams
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary-green to-emerald-600 mx-auto rounded-full mt-6"></div>
+          </div>
+          <Testimonials />
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-50 rounded-full blur-3xl"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Find answers to common questions about the mortgage process
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary-green to-emerald-600 mx-auto rounded-full mt-6"></div>
+          </div>
+          <FAQAccordion />
         </div>
       </section>
 
