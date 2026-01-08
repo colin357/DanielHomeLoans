@@ -11,39 +11,39 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Sarah & Michael Chen",
-    location: "Broken Arrow, OK",
-    text: "Daniel made our first home buying experience incredibly smooth. He was always available to answer our questions and guided us through every step. We closed in 30 days and couldn't be happier!",
+    name: "Jonathan & Isaac",
+    location: "Holland, OK",
+    text: "Daniel and the fairway team took such great care of my fiancé and I - from start to finish, guiding us through the process and explaining it in ways that made perfect sense for us. Daniel took time to make sure we understood the process and kept a clear line of communication open so we weren't wondering where our refinance was at in the process!",
     rating: 5
   },
   {
-    name: "Robert Martinez",
+    name: "Christina",
     location: "Tulsa, OK",
-    text: "As a self-employed business owner, I thought getting a mortgage would be difficult. Daniel knew exactly what documentation I needed and made the whole process painless. Highly recommend!",
+    text: "Daniel was easy to understand, kept me informed every step of the way, helped advise me on moves to make to raise my credit score that I wasn't aware of. He helped make my dreams a reality in less than 3 months.",
     rating: 5
   },
   {
-    name: "Jennifer Thompson",
-    location: "Jenks, OK",
-    text: "Daniel helped me refinance my home and saved me over $400 per month! His expertise and dedication to finding the best rates is unmatched. Thank you, Daniel!",
+    name: "Rebecca",
+    location: "Lawrence Creek, OK",
+    text: "Daniel made this process so much easier than it was! We had multiple set backs as we were buying while selling our home and he always had/found an answer to any problem we had! He even answered on his family vacation! 10/10 recommend you request Daniel to handle you loan process!",
     rating: 5
   },
   {
-    name: "David & Lisa Patel",
-    location: "Bixby, OK",
-    text: "We had worked with other lenders before and were frustrated with the process. Daniel was different - responsive, knowledgeable, and truly cared about getting us the best deal. We're now in our dream home!",
+    name: "Cascases",
+    location: "Tulsa, OK",
+    text: "Daniel Fowler!!! He is amazing, made the entire process so smooth. He worked none stop making sure I understood every process thoroughly, I'm a first time home buyer so I had lots of questions. He's very patient! He Never left an email, call or txt unanswered. I wouldn't have wanted to do this with anyone else. He was a perfect fit for me.",
     rating: 5
   },
   {
-    name: "Amanda Rodriguez",
-    location: "Owasso, OK",
-    text: "Daniel went above and beyond to help me secure financing for my new home. His communication was excellent, and he made sure I understood every step. I'll definitely work with him again!",
+    name: "Clifford",
+    location: "Tulsa, OK",
+    text: "Daniel was a great. This was our first home and he was patient and answered all of our questions and helped us every step of the way. Was extremely easy to work with and made the whole process super comfortable. He went above and beyond and got us the loan we needed. We really appreciate the whole team from Fairway Mortgage. They all went above and beyond.",
     rating: 5
   },
   {
-    name: "James Wilson",
+    name: "Kyle",
     location: "Sand Springs, OK",
-    text: "Professional, knowledgeable, and genuinely cares about his clients. Daniel found me a better rate than I thought possible and made the entire process stress-free. Five stars!",
+    text: "It was just super easy. I didn't worry about this at all.",
     rating: 5
   }
 ];
