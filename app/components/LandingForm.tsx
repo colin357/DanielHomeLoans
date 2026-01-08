@@ -72,12 +72,12 @@ export default function LandingForm() {
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-green/10 to-emerald-500/10 px-4 py-2 rounded-full mb-4">
                 <svg className="w-4 h-4 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                  <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm font-semibold text-gray-700">Takes less than 60 seconds</span>
+                <span className="text-sm font-semibold text-gray-700">AI-Powered 5-Minute Approval</span>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Get Your Free Quote</h3>
-              <p className="text-gray-600">Start saving on your mortgage today</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Get Your HELOC Approval</h3>
+              <p className="text-gray-600">No hard credit pull. No commitment required.</p>
             </div>
 
             <div className="space-y-5">

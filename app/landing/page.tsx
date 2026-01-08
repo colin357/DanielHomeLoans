@@ -17,9 +17,9 @@ export default function LandingPage() {
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full shadow-lg border border-primary-green/20">
               <svg className="w-5 h-5 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm font-semibold text-gray-800">Trusted by 167+ Happy Homeowners</span>
+              <span className="text-sm font-semibold text-gray-800">AI-Powered HELOC Approval in 5 Minutes</span>
             </span>
           </div>
 
@@ -28,14 +28,14 @@ export default function LandingPage() {
             <div className="space-y-8">
               <div>
                 <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 leading-[1.1]">
-                  Rates Are <span className="bg-gradient-to-r from-primary-green to-emerald-600 bg-clip-text text-transparent">Dropping</span>
+                  Unlock Your Home's <span className="bg-gradient-to-r from-primary-green to-emerald-600 bg-clip-text text-transparent">Hidden Equity</span>
                 </h1>
                 <div className="space-y-4">
                   <p className="text-2xl md:text-3xl text-gray-800 font-semibold">
-                    See if you can qualify in under <span className="text-primary-green">60 seconds</span>
+                    Get approved for your HELOC in just <span className="text-primary-green">5 minutes</span>
                   </p>
                   <p className="text-xl md:text-2xl text-gray-700">
-                    Unlock your reality <span className="font-bold text-primary-green">in a few minutes.</span>
+                    No commitment. <span className="font-bold text-primary-green">No hard credit pull.</span> Powered by AI.
                   </p>
                 </div>
               </div>
@@ -45,14 +45,14 @@ export default function LandingPage() {
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-green to-emerald-600 flex items-center justify-center shadow-lg">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                       </svg>
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Ready to Save Thousands?</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">No Commitment Required</h3>
                     <p className="text-gray-700 leading-relaxed">
-                      Whether it's a purchase or refinance, we can be your key to a better financial future. Stop paying high interest rates!
+                      Our AI-powered system gives you instant approval without locking you in or impacting your credit score. You're in control every step of the way.
                     </p>
                   </div>
                 </div>
@@ -63,14 +63,14 @@ export default function LandingPage() {
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-md">
                       <svg className="w-6 h-6 text-primary-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">Simplify Your Path to Real Estate</h3>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">Access Cash from Your Home Equity</h3>
                     <p className="text-gray-700">
-                      Tired of paying rent every month? Let's discuss the best plan to help you own your dream home!
+                      Pay off high-interest debt, fund home improvements, or cover unexpected expenses. Your home equity gives you financial flexibility.
                     </p>
                   </div>
                 </div>
@@ -111,12 +111,12 @@ export default function LandingPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-primary-green font-semibold mb-2">CHOOSE US</p>
+            <p className="text-primary-green font-semibold mb-2">WHY HELOC?</p>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Does This Sound Like <span className="text-primary-green">You?</span>
+              Is a HELOC Right for <span className="text-primary-green">You?</span>
             </h2>
             <p className="text-gray-600 text-lg">
-              It's time to take control of your mortgage options. Find more flexibility and options—faster, easier, lower payments and costs, with us.
+              Tap into your home's equity for what matters most. Fast, flexible, and designed for homeowners like you.
             </p>
           </div>
 
@@ -130,7 +130,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <p className="text-gray-700">
-                You're not your home, but have credit card debt or other high-interest loans.
+                You own your home and have built up equity that's just sitting there unused.
               </p>
             </div>
 
@@ -143,7 +143,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <p className="text-gray-700">
-                You're a homeowner & you actually qualify for a loan or new credit you can afford.
+                You need cash for home improvements, debt consolidation, or unexpected expenses.
               </p>
             </div>
 
@@ -156,7 +156,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <p className="text-gray-700">
-                You're worried about high interest rates and missing your chance to lock in before rates rise again.
+                You want lower interest rates than credit cards or personal loans without the hassle.
               </p>
             </div>
 
@@ -169,7 +169,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <p className="text-gray-700">
-                The past process feels overwhelming, with too much paperwork and confusing jargon.
+                You're looking for a flexible line of credit you can use when you need it, not a lump sum.
               </p>
             </div>
           </div>
@@ -238,7 +238,7 @@ export default function LandingPage() {
           <div className="text-center mb-12">
             <p className="text-primary-green font-semibold mb-2">HOW IT WORKS</p>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              The Three Steps To Buy Your Next Home
+              Get Your HELOC in 3 Simple Steps
             </h2>
           </div>
 
@@ -249,45 +249,45 @@ export default function LandingPage() {
             <div className="space-y-12">
               {/* Step 1 */}
               <div className="relative flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-primary-green to-emerald-600 flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
                   1
                 </div>
                 <div className="flex-1 pt-2">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Schedule Your Free Consultation
+                    Submit Your Information
                   </h3>
                   <p className="text-gray-600">
-                    Get started by booking a quick call where we'll review your goals, answer your questions, and see how much home you really qualify for.
+                    Fill out our quick 5-minute form. Our AI system analyzes your information instantly with no hard credit pull or commitment required.
                   </p>
                 </div>
               </div>
 
               {/* Step 2 */}
               <div className="relative flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-primary-green to-emerald-600 flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
                   2
                 </div>
                 <div className="flex-1 pt-2">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Personalized Loan Strategy
+                    Get Instant AI Approval
                   </h3>
                   <p className="text-gray-600">
-                    Based on your situation, we'll build a custom financing plan, whether you're buying your first home, upgrading, or refinancing, we show what works best for you.
+                    Receive your pre-approval decision in minutes, not days. See exactly how much you qualify for and your potential rates—all without impacting your credit.
                   </p>
                 </div>
               </div>
 
               {/* Step 3 */}
               <div className="relative flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-primary-green to-emerald-600 flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
                   3
                 </div>
                 <div className="flex-1 pt-2">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Fast Execution & Support
+                    Finalize & Access Your Funds
                   </h3>
                   <p className="text-gray-600">
-                    We guide you through the application, save those closing schedules, and support you all the way to closing. Clear, fast, no-BS guidance when you need it most.
+                    When you're ready to move forward, we'll finalize your HELOC and you can start accessing your home equity. Fast, flexible, and hassle-free.
                   </p>
                 </div>
               </div>
