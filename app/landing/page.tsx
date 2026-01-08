@@ -75,22 +75,6 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-
-              {/* Hero Image - Desktop */}
-              <div className="hidden lg:block">
-                <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-primary-green to-emerald-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition"></div>
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                    <Image
-                      src="/images/Image 1.jpg"
-                      alt="Happy homeowners"
-                      width={600}
-                      height={450}
-                      className="object-cover w-full"
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Right Side - Form */}
@@ -362,53 +346,118 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
-              <Image
-                src="/images/Fairway Home Mortgage.webp"
-                alt="Fairway Independent Mortgage"
-                width={150}
-                height={40}
-                className="h-10 w-auto brightness-0 invert mb-4"
-              />
-              <p className="text-sm text-gray-400">
-                4164 South Harvard Ave Suite E-1<br />
-                Tulsa, OK 74135
-              </p>
+              <div className="mb-6">
+                <Image
+                  src="/images/Fairway Home Mortgage.webp"
+                  alt="Fairway Independent Mortgage"
+                  width={150}
+                  height={40}
+                  className="h-10 w-auto brightness-0 invert"
+                />
+              </div>
+              <div className="text-sm text-gray-400 space-y-3">
+                <div>
+                  <p className="font-semibold text-white mb-1">NMLS ADDRESS</p>
+                  <p>4164 South Harvard Ave Suite E-1</p>
+                  <p>Tulsa, OK 74135</p>
+                </div>
+                <div className="pt-3">
+                  <p className="font-semibold text-white mb-1">Madison Headquarters</p>
+                  <p>2750 E Beltline Lane</p>
+                  <p>Madison, WI 53718</p>
+                </div>
+                <div className="pt-3">
+                  <p className="font-semibold text-white">Toll Free: 866-912-4800</p>
+                  <p className="text-xs">Monday–Friday, 8:30 a.m.–5:00 p.m. Central</p>
+                </div>
+              </div>
             </div>
 
             <div>
-              <h4 className="font-bold mb-4 text-primary-green">Customer Service</h4>
-              <p className="text-sm text-gray-400 mb-2">Toll Free: 800-320-7544</p>
-              <a href="#" className="text-sm text-primary-green hover:text-emerald-400">Contact Customer Service</a>
+              <h4 className="text-lg font-bold mb-4 text-primary-green">Customer Service</h4>
+              <div className="text-sm text-gray-400 space-y-3">
+                <p className="font-semibold text-white">Toll Free: 800-320-7544</p>
+                <a href="#" className="block text-primary-green hover:text-emerald-400 transition">Contact Customer Service</a>
+                <div className="pt-3">
+                  <p className="font-semibold text-white mb-1">Loan Serviced in New York?</p>
+                  <a href="#" className="text-primary-green hover:text-emerald-400 transition">Click Here</a>
+                </div>
+              </div>
             </div>
 
             <div>
-              <h4 className="font-bold mb-4 text-primary-green">Report Fraud</h4>
-              <p className="text-sm text-gray-400 mb-2">Hotline: 858-605-0067</p>
-              <a href="#" className="text-sm text-primary-green hover:text-emerald-400">Report An Incident</a>
+              <h4 className="text-lg font-bold mb-4 text-primary-green">Report Fraud</h4>
+              <div className="text-sm text-gray-400 space-y-3">
+                <div>
+                  <p className="font-semibold text-white mb-1">Suspicious Activity</p>
+                  <p>Hotline: 858-605-0067</p>
+                </div>
+                <a href="#" className="block text-primary-green hover:text-emerald-400 transition pt-2">Report An Incident Online</a>
+              </div>
             </div>
 
             <div>
-              <h4 className="font-bold mb-4 text-primary-green">Complaints</h4>
-              <p className="text-sm text-gray-400 mb-2">Toll Free: 877-529-3276</p>
-              <a href="#" className="text-sm text-primary-green hover:text-emerald-400">Submit Complaint</a>
+              <h4 className="text-lg font-bold mb-4 text-primary-green">Complaints</h4>
+              <div className="text-sm text-gray-400 space-y-3">
+                <p className="font-semibold text-white">Toll Free: 877-529-3276</p>
+                <a href="#" className="text-primary-green hover:text-emerald-400 transition">Submit Complaint</a>
+              </div>
             </div>
           </div>
 
-          <div className="border-t border-gray-700 mt-8 pt-8">
-            <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
-              <a href="#" className="hover:text-primary-green">Privacy Policy</a>
-              <span>|</span>
-              <a href="#" className="hover:text-primary-green">Terms of Service</a>
-              <span>|</span>
-              <a href="#" className="hover:text-primary-green">Legal Disclosures</a>
+          <div className="border-t border-gray-700 pt-8 mt-8">
+            <div className="text-sm text-gray-400 space-y-4 mb-6">
+              <p className="font-bold text-white text-base">Legal Information & Links</p>
+              <div className="flex flex-wrap gap-x-6 gap-y-2">
+                <a href="#" className="text-primary-green hover:text-emerald-400 transition">Privacy Policy</a>
+                <span className="text-gray-600">|</span>
+                <a href="#" className="text-primary-green hover:text-emerald-400 transition">Terms of Use</a>
+                <span className="text-gray-600">|</span>
+                <a href="#" className="text-primary-green hover:text-emerald-400 transition">Legal Disclosures</a>
+                <span className="text-gray-600">|</span>
+                <a href="#" className="text-primary-green hover:text-emerald-400 transition">Cease Consumer Complaints</a>
+                <span className="text-gray-600">|</span>
+                <a href="#" className="text-primary-green hover:text-emerald-400 transition">IL Community Reinvestment Notice</a>
+              </div>
             </div>
-            <p className="text-xs text-gray-500">
-              © Copyright 2025 Fairway Independent Mortgage Corporation | NMLS # 2289 | All rights reserved.
-            </p>
+
+            <div className="text-xs text-gray-500 mb-8 leading-relaxed">
+              <p>© Copyright 2025 Fairway Independent Mortgage Corporation | NMLS # 2289 | All rights reserved. <a href="https://nmlsconsumeraccess.org/" className="text-primary-green hover:text-emerald-400 transition">nmlsconsumeraccess.org</a></p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-12 justify-center md:justify-start pt-6 border-t border-gray-800">
+              <div className="bg-white/10 p-3 rounded-lg hover:bg-white/20 transition">
+                <Image
+                  src="/images/Equal Housing.webp"
+                  alt="Equal Housing Opportunity"
+                  width={60}
+                  height={60}
+                  className="h-16 w-auto"
+                />
+              </div>
+              <div className="bg-white/10 p-3 rounded-lg hover:bg-white/20 transition">
+                <Image
+                  src="/images/NAHREP.webp"
+                  alt="NAHREP - National Association of Hispanic Real Estate Professionals"
+                  width={80}
+                  height={60}
+                  className="h-16 w-auto"
+                />
+              </div>
+              <div className="bg-white/10 p-3 rounded-lg hover:bg-white/20 transition">
+                <Image
+                  src="/images/NMLS.webp"
+                  alt="NMLS Consumer Access"
+                  width={100}
+                  height={60}
+                  className="h-16 w-auto"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </footer>
