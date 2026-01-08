@@ -5,374 +5,284 @@ export default function Home() {
     <main className="min-h-screen">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-primary-green">
-              Daniel Fowler Home Loans
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-primary-green transition">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-primary-green transition">About</a>
-              <a href="#services" className="text-gray-700 hover:text-primary-green transition">Services</a>
-              <a href="#success" className="text-gray-700 hover:text-primary-green transition">Success Stories</a>
-              <a href="#contact" className="text-gray-700 hover:text-primary-green transition">Contact</a>
-            </div>
-            <button className="md:hidden">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <div className="flex items-center">
+              <svg className="h-10 w-auto" viewBox="0 0 120 40" fill="none">
+                <path d="M20 8L12 16L20 24V8Z" fill="#2D5234"/>
+                <path d="M12 16L20 24L28 16L20 8L12 16Z" fill="#3A8B4D"/>
+                <text x="35" y="28" fontFamily="Arial, sans-serif" fontSize="16" fontWeight="bold" fill="#2D5234">Fairway</text>
               </svg>
-            </button>
+            </div>
+            <div className="flex items-center gap-6">
+              <a href="#blog" className="text-gray-700 hover:text-primary-green transition hidden md:inline">Blog/Resources</a>
+              <a
+                href="#contact"
+                className="bg-primary-green hover:bg-primary-green-dark text-white font-semibold px-6 py-2 rounded transition"
+              >
+                Contact Me
+              </a>
+            </div>
           </div>
         </nav>
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-br from-green-50 to-blue-50 py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+      <section id="home" className="relative bg-gradient-to-br from-pink-50 via-white to-purple-50 py-16 md:py-24 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+              Helping You
+            </h1>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Buy Your Dream Home
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
-              Expert home loan guidance to help you navigate the path to homeownership with confidence
+            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Buying a home is a big decision. We are here to answer questions, explain your options, and help you make the right move.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact"
-                className="bg-primary-green hover:bg-primary-green-dark text-white font-semibold px-8 py-4 rounded-lg transition shadow-lg hover:shadow-xl"
-              >
-                Get Started Today
-              </a>
-              <a
-                href="#services"
-                className="bg-white hover:bg-gray-50 text-primary-green border-2 border-primary-green font-semibold px-8 py-4 rounded-lg transition shadow-lg hover:shadow-xl"
-              >
-                Learn More
-              </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-primary-green hover:bg-primary-green-dark text-white font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl"
+            >
+              GET IN TOUCH
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          {/* Tilted Photos */}
+          <div className="flex justify-center items-center gap-4 md:gap-6 flex-wrap mt-16">
+            <div className="transform -rotate-6 transition-transform hover:rotate-0 shadow-xl">
+              <Image
+                src="/images/team-1.jpg"
+                alt="Happy homeowners"
+                width={300}
+                height={400}
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <div className="transform rotate-3 transition-transform hover:rotate-0 shadow-xl">
+              <Image
+                src="/images/team-2.jpg"
+                alt="Successful home closing"
+                width={300}
+                height={400}
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <div className="transform -rotate-3 transition-transform hover:rotate-0 shadow-xl">
+              <Image
+                src="/images/team-3.jpg"
+                alt="Happy clients"
+                width={300}
+                height={400}
+                className="rounded-lg object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Stats Section */}
+      <section className="bg-gray-900 text-white py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-bold">Real Results</h3>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">4.91</div>
+              <div className="text-gray-400">Average Review</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">167</div>
+              <div className="text-gray-400">Reviews</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">63</div>
+              <div className="text-gray-400">Loans This Year</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* My Story Section */}
       <section id="about" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose Daniel Fowler Home Loans?
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+              My Story
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              With years of experience in the mortgage industry, we're committed to making your home buying journey smooth and successful.
+            <p className="text-lg text-gray-600 italic">
+              Hi, I'm Daniel Fowler
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 rounded-lg hover:shadow-lg transition">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Expert Guidance</h3>
-              <p className="text-gray-600">
-                Personalized support through every step of the mortgage process
-              </p>
-            </div>
-
-            <div className="text-center p-6 rounded-lg hover:shadow-lg transition">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-secondary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Competitive Rates</h3>
-              <p className="text-gray-600">
-                Access to competitive mortgage rates and flexible loan options
-              </p>
-            </div>
-
-            <div className="text-center p-6 rounded-lg hover:shadow-lg transition">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Fast Processing</h3>
-              <p className="text-gray-600">
-                Quick approval process to get you into your dream home faster
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-600">
-              Comprehensive home loan solutions tailored to your needs
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition">
-              <h3 className="text-2xl font-bold mb-4 text-primary-green">Home Purchase Loans</h3>
-              <p className="text-gray-600 mb-4">
-                Whether you're a first-time buyer or looking to upgrade, we'll help you find the perfect loan for your new home.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-primary-green mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Conventional Loans
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-primary-green mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  FHA Loans
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-primary-green mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  VA Loans
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition">
-              <h3 className="text-2xl font-bold mb-4 text-secondary-blue">Refinancing</h3>
-              <p className="text-gray-600 mb-4">
-                Lower your monthly payments or access your home's equity with our refinancing options.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-secondary-blue mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Rate & Term Refinance
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-secondary-blue mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Cash-Out Refinance
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-secondary-blue mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Streamline Refinance
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Simple Process, Powerful Results
-            </h2>
-            <p className="text-xl text-gray-600">
-              Getting your home loan is easier than you think
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary-green text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
-                1
-              </div>
-              <h3 className="text-xl font-bold mb-2">Apply</h3>
-              <p className="text-gray-600">
-                Complete our simple online application
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary-green text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
-                2
-              </div>
-              <h3 className="text-xl font-bold mb-2">Review</h3>
-              <p className="text-gray-600">
-                We review your application and options
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary-green text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
-                3
-              </div>
-              <h3 className="text-xl font-bold mb-2">Approve</h3>
-              <p className="text-gray-600">
-                Get approved and finalize your loan
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary-green text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
-                4
-              </div>
-              <h3 className="text-xl font-bold mb-2">Close</h3>
-              <p className="text-gray-600">
-                Close on your dream home!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories Section */}
-      <section id="success" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Happy Homeowners
-            </h2>
-            <p className="text-xl text-gray-600">
-              See the smiles of our satisfied clients
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <div className="relative h-80">
-                <Image
-                  src="/images/team-1.jpg"
-                  alt="Happy homeowners with Allegiance Title"
-                  fill
-                  className="object-cover hover-rotate"
-                />
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <div className="relative h-80">
-                <Image
-                  src="/images/team-2.jpg"
-                  alt="Successful home closing"
-                  fill
-                  className="object-cover hover-rotate"
-                />
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <div className="relative h-80">
-                <Image
-                  src="/images/team-3.jpg"
-                  alt="Happy clients celebrating"
-                  fill
-                  className="object-cover hover-rotate"
-                />
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <div className="relative h-80">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <div>
                 <Image
                   src="/images/team-4.jpg"
-                  alt="Another successful closing"
-                  fill
-                  className="object-cover hover-rotate"
+                  alt="Daniel Fowler and team"
+                  width={500}
+                  height={400}
+                  className="rounded-lg shadow-lg object-cover w-full"
                 />
               </div>
             </div>
 
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <div className="relative h-80">
-                <Image
-                  src="/images/team-5.jpg"
-                  alt="Celebrating homeownership"
-                  fill
-                  className="object-cover hover-rotate"
-                />
-              </div>
-            </div>
+            <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+              <p>
+                I'm a father of two born and raised in Oklahoma, and I help families navigate the home buying process with clarity and confidence.
+              </p>
 
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-              <div className="relative h-80 bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <p className="text-2xl font-bold text-gray-900 mb-4">Your Photo Here!</p>
-                  <p className="text-gray-600">Let us help you achieve your homeownership dreams</p>
-                </div>
-              </div>
+              <p>
+                I grew up in a household with nine siblings and limited financial resources, which showed me early on how powerful financial education can be. After studying finance at OSU, I began my career as a financial advisor, helping clients grow and manage their wealth.
+              </p>
+
+              <p>
+                When I moved back to Tulsa, I transitioned into mortgage lending and realized I could make the biggest impact earlier in the journey. Today, I help people build credit, create a plan and prepare for homeownership.
+              </p>
+
+              <p>
+                Buying my first home was one of the most empowering moments of my life. My goal is to help others use homeownership as a foundation to build long-term wealth and security.
+              </p>
+
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 bg-primary-green hover:bg-primary-green-dark text-white font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl mt-6"
+              >
+                LEARN MORE
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
             </div>
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <Image
+              src="/images/team-5.jpg"
+              alt="Daniel Fowler with client"
+              width={400}
+              height={500}
+              className="rounded-lg shadow-lg object-cover"
+            />
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact CTA Section */}
       <section id="contact" className="py-20 bg-primary-green text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact us today and take the first step toward owning your dream home
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a
-              href="tel:+1234567890"
-              className="bg-white text-primary-green hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition shadow-lg hover:shadow-xl inline-flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Call Now
-            </a>
-            <a
-              href="mailto:daniel@danielfowlerhomeloans.com"
-              className="bg-white text-primary-green hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition shadow-lg hover:shadow-xl inline-flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Email Us
-            </a>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="max-w-xl">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Contact me today for a free pre-approval.
+              </h2>
+              <p className="text-lg text-white/90">
+                Let's get started—understand your options, and see what you qualify for before you start shopping.
+              </p>
+            </div>
+            <div>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 bg-white text-primary-green hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl"
+              >
+                GET IN TOUCH
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">Daniel Fowler Home Loans</h3>
-              <p className="text-gray-400">
-                Your trusted partner in achieving homeownership dreams.
-              </p>
+              <div className="mb-4">
+                <svg className="h-12 w-auto" viewBox="0 0 120 50" fill="none">
+                  <path d="M20 10L12 20L20 30V10Z" fill="#3A8B4D"/>
+                  <path d="M12 20L20 30L28 20L20 10L12 20Z" fill="#4CAF50"/>
+                  <text x="35" y="32" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="bold" fill="white">HOME</text>
+                </svg>
+              </div>
+              <div className="text-sm text-gray-400 space-y-2">
+                <p className="font-semibold text-white">NMLS ADDRESS</p>
+                <p>4164 South Harvard Ave Suite E-1</p>
+                <p>Tulsa, OK 74135</p>
+                <p className="mt-4 font-semibold text-white">Madison Headquarters Location</p>
+                <p>2750 E Beltline Lane, Madison, WI 53718</p>
+                <p className="mt-4">Toll Free: 866-912-4800</p>
+                <p>Monday–Friday, 8:30 a.m.–5:00 p.m. Central</p>
+              </div>
             </div>
+
             <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                <li><a href="#home" className="text-gray-400 hover:text-white transition">Home</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-white transition">About</a></li>
-                <li><a href="#services" className="text-gray-400 hover:text-white transition">Services</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-white transition">Contact</a></li>
-              </ul>
+              <h4 className="text-lg font-semibold mb-4">Customer Service</h4>
+              <div className="text-sm text-gray-400 space-y-2">
+                <p>Toll Free: 800-320-7544</p>
+                <p className="mt-4 text-primary-green hover:underline cursor-pointer">Contact Customer Service</p>
+                <p className="mt-4 font-semibold text-white">Loan Serviced in New York?</p>
+                <p className="text-primary-green hover:underline cursor-pointer">Click Here</p>
+              </div>
             </div>
+
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Email: daniel@danielfowlerhomeloans.com</li>
-                <li>Phone: (123) 456-7890</li>
-              </ul>
+              <h4 className="text-lg font-semibold mb-4">Report Fraud / Suspicious Activity</h4>
+              <div className="text-sm text-gray-400 space-y-2">
+                <p>Hotline: 858-605-0067</p>
+                <p className="mt-4 text-primary-green hover:underline cursor-pointer">Report An Incident Online, click here</p>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Complaints</h4>
+              <div className="text-sm text-gray-400 space-y-2">
+                <p>Toll Free: 877-529-3276</p>
+                <p className="text-primary-green hover:underline cursor-pointer">Submit Complaint</p>
+              </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Daniel Fowler Home Loans. All rights reserved.</p>
+
+          <div className="border-t border-gray-700 pt-6 mt-6">
+            <div className="text-sm text-gray-400 space-y-2 mb-4">
+              <p className="font-semibold text-white">Legal Information & Links</p>
+              <div className="flex flex-wrap gap-4">
+                <a href="#" className="text-primary-green hover:underline">Privacy Policy</a>
+                <a href="#" className="text-primary-green hover:underline">Terms of Use</a>
+                <a href="#" className="text-primary-green hover:underline">Legal Disclosures</a>
+                <a href="#" className="text-primary-green hover:underline">Cease Consumer Complaints</a>
+                <a href="#" className="text-primary-green hover:underline">IL Community Reinvestment Notice</a>
+              </div>
+            </div>
+
+            <div className="text-xs text-gray-500 mb-6">
+              <p>© Copyright 2025 Fairway Independent Mortgage Corporation | NMLS # 2289 | All rights reserved. <a href="https://nmlsconsumeraccess.org/" className="text-primary-green hover:underline">nmlsconsumeraccess.org</a></p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-8 justify-center md:justify-start">
+              <div className="text-center">
+                <svg className="h-16 w-16 mx-auto" viewBox="0 0 64 64" fill="white">
+                  <path d="M32 8L8 24v28h48V24L32 8zm0 4l20 14v24H12V26l20-14z"/>
+                  <text x="32" y="38" fontSize="12" textAnchor="middle" fill="white" fontWeight="bold">EQUAL</text>
+                  <text x="32" y="50" fontSize="8" textAnchor="middle" fill="white">HOUSING</text>
+                </svg>
+              </div>
+              <div>
+                <p className="text-white font-bold text-2xl">NAHREP</p>
+                <p className="text-gray-400 text-xs">National Association of Hispanic<br/>Real Estate Professionals</p>
+              </div>
+              <div>
+                <p className="text-white font-bold text-lg">NMLS</p>
+                <p className="text-gray-400 text-xs">Consumer Access</p>
+              </div>
+            </div>
           </div>
         </div>
       </footer>

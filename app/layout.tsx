@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Daniel Fowler Home Loans - Your Path to Homeownership",
-  description: "Professional home loan services to help you buy your dream home. Expert guidance through every step of the mortgage process.",
+  title: "Daniel Fowler - Fairway Independent Mortgage | Home Loans in Oklahoma",
+  description: "Helping you buy your dream home. Professional mortgage lending services with expert guidance through every step. Serving Oklahoma and beyond with Fairway Independent Mortgage.",
 };
 
 export default function RootLayout({
