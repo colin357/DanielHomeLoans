@@ -1,10 +1,10 @@
 import Image from "next/image";
-import MortgageCalculator from "./components/MortgageCalculator";
 import FAQAccordion from "./components/FAQAccordion";
 import StickyContact from "./components/StickyContact";
 import SocialProof from "./components/SocialProof";
 import ProcessTimeline from "./components/ProcessTimeline";
 import Testimonials from "./components/Testimonials";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   return (
@@ -76,7 +76,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="group transform rotate-3 transition-all duration-500 hover:rotate-0 hover:scale-105 shadow-2xl hover:shadow-3xl">
+            <div className="hidden md:block group transform rotate-3 transition-all duration-500 hover:rotate-0 hover:scale-105 shadow-2xl hover:shadow-3xl">
               <div className="overflow-hidden rounded-2xl border-4 border-white">
                 <Image
                   src="/images/Image 2.jpg"
@@ -87,7 +87,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="group transform -rotate-3 transition-all duration-500 hover:rotate-0 hover:scale-105 shadow-2xl hover:shadow-3xl">
+            <div className="hidden md:block group transform -rotate-3 transition-all duration-500 hover:rotate-0 hover:scale-105 shadow-2xl hover:shadow-3xl">
               <div className="overflow-hidden rounded-2xl border-4 border-white">
                 <Image
                   src="/images/Image 3.jpg"
@@ -238,23 +238,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mortgage Calculator Section */}
-      <section className="py-24 bg-gradient-to-br from-primary-green/5 via-emerald-50 to-white relative overflow-hidden">
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-green/10 rounded-full blur-3xl"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-              Calculate Your Monthly Payment
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get an instant estimate of your monthly mortgage payment
-            </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary-green to-emerald-600 mx-auto rounded-full mt-6"></div>
-          </div>
-          <MortgageCalculator />
-        </div>
-      </section>
-
       {/* Testimonials Section */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl"></div>
@@ -301,79 +284,7 @@ export default function Home() {
             </p>
           </div>
 
-          <form
-            action="/api/contact"
-            method="POST"
-            className="bg-gradient-to-br from-gray-50 to-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100"
-          >
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Full Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition"
-                  placeholder="John Doe"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Phone Number *
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition"
-                  placeholder="(918) 555-1234"
-                />
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                Email Address *
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition"
-                placeholder="john@example.com"
-              />
-            </div>
-
-            <div className="mb-8">
-              <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                Message (Optional)
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition resize-none"
-                placeholder="Tell me about your home buying goals..."
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-r from-primary-green to-emerald-600 hover:from-primary-green-dark hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-full transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 text-lg"
-            >
-              Send Message
-            </button>
-
-            <p className="text-sm text-gray-500 text-center mt-4">
-              By submitting this form, you agree to be contacted about your inquiry.
-            </p>
-          </form>
+          <ContactForm />
         </div>
       </section>
 
@@ -395,7 +306,7 @@ export default function Home() {
             </div>
             <div className="flex-shrink-0">
               <a
-                href="tel:+19185551234"
+                href="tel:+19184029630"
                 className="group inline-flex items-center gap-3 bg-white text-primary-green hover:bg-gray-50 font-bold px-10 py-5 rounded-full transition-all shadow-2xl hover:shadow-3xl transform hover:scale-105 text-lg"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
