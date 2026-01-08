@@ -63,7 +63,7 @@ export default function Home() {
                   alt="Happy homeowners"
                   width={320}
                   height={420}
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
             </div>
@@ -74,7 +74,7 @@ export default function Home() {
                   alt="Successful home closing"
                   width={320}
                   height={420}
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function Home() {
                   alt="Happy clients"
                   width={320}
                   height={420}
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
             </div>
@@ -97,15 +97,15 @@ export default function Home() {
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-pattern opacity-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 items-center">
-            <div className="text-center md:text-left">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 items-start">
+            <div className="text-center md:text-left md:pt-4">
               <h3 className="text-3xl font-bold bg-gradient-to-r from-primary-green to-emerald-400 bg-clip-text text-transparent">Real Results</h3>
               <p className="text-gray-400 mt-2">That speak for themselves</p>
             </div>
             <div className="text-center group">
               <div className="text-6xl font-bold mb-2 bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent group-hover:scale-110 transition-transform">4.91</div>
-              <div className="text-gray-400 text-lg">Average Review</div>
-              <div className="flex justify-center mt-2">
+              <div className="text-gray-400 text-lg mb-2">Average Review</div>
+              <div className="flex justify-center">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -193,7 +193,7 @@ export default function Home() {
                   alt="Happy homeowners"
                   width={600}
                   height={450}
-                  className="object-cover w-full h-80 transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover object-top w-full h-80 transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
@@ -203,12 +203,100 @@ export default function Home() {
                   alt="Successful home closing"
                   width={600}
                   height={450}
-                  className="object-cover w-full h-80 transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover object-top w-full h-80 transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Get Your Free Pre-Approval
+            </h2>
+            <p className="text-xl text-gray-600">
+              Fill out the form below and I'll get back to you right away
+            </p>
+          </div>
+
+          <form
+            action="/api/contact"
+            method="POST"
+            className="bg-gradient-to-br from-gray-50 to-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100"
+          >
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition"
+                  placeholder="John Doe"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition"
+                  placeholder="(918) 555-1234"
+                />
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                Email Address *
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition"
+                placeholder="john@example.com"
+              />
+            </div>
+
+            <div className="mb-8">
+              <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                Message (Optional)
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition resize-none"
+                placeholder="Tell me about your home buying goals..."
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-primary-green to-emerald-600 hover:from-primary-green-dark hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-full transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 text-lg"
+            >
+              Send Message
+            </button>
+
+            <p className="text-sm text-gray-500 text-center mt-4">
+              By submitting this form, you agree to be contacted about your inquiry.
+            </p>
+          </form>
         </div>
       </section>
 
