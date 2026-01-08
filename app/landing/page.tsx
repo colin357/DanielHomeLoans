@@ -7,44 +7,101 @@ export default function LandingPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section with Form */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Copy */}
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Rates Are Dropping
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-700 mb-4">
-                See if you can qualify in under 60 seconds.<br />
-                Unlock your reality <span className="font-bold">in a few minutes.</span>
-              </p>
-              <p className="text-lg text-gray-600 mb-8">
-                Are you ready to save thousands? We think you are! Whether it's a purchase or refinance, we can be your key to a better financial future.
-              </p>
+      <section className="relative bg-gradient-to-br from-primary-green/5 via-emerald-50 to-blue-50 py-16 md:py-24 overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-green/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
 
-              <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 mb-8">
-                <h3 className="font-bold text-gray-900 mb-3">Simply your path to investing in real estate</h3>
-                <p className="text-gray-600">
-                  Are you tired of paying rent every month? Let's discuss the best plan for you!
-                </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Top Badge */}
+          <div className="text-center mb-8">
+            <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full shadow-lg border border-primary-green/20">
+              <svg className="w-5 h-5 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <span className="text-sm font-semibold text-gray-800">Trusted by 167+ Happy Homeowners</span>
+            </span>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left Side - Copy */}
+            <div className="space-y-8">
+              <div>
+                <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 leading-[1.1]">
+                  Rates Are <span className="bg-gradient-to-r from-primary-green to-emerald-600 bg-clip-text text-transparent">Dropping</span>
+                </h1>
+                <div className="space-y-4">
+                  <p className="text-2xl md:text-3xl text-gray-800 font-semibold">
+                    See if you can qualify in under <span className="text-primary-green">60 seconds</span>
+                  </p>
+                  <p className="text-xl md:text-2xl text-gray-700">
+                    Unlock your reality <span className="font-bold text-primary-green">in a few minutes.</span>
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-primary-green/10">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-green to-emerald-600 flex items-center justify-center shadow-lg">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Ready to Save Thousands?</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Whether it's a purchase or refinance, we can be your key to a better financial future. Stop paying high interest rates!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-emerald-50 rounded-2xl p-8 border border-gray-200 shadow-lg">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-md">
+                      <svg className="w-6 h-6 text-primary-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">Simplify Your Path to Real Estate</h3>
+                    <p className="text-gray-700">
+                      Tired of paying rent every month? Let's discuss the best plan to help you own your dream home!
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {/* Hero Image - Desktop */}
-              <div className="hidden md:block rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/Image 1.jpg"
-                  alt="Happy homeowners"
-                  width={500}
-                  height={400}
-                  className="object-cover w-full"
-                />
+              <div className="hidden lg:block">
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-primary-green to-emerald-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition"></div>
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/images/Image 1.jpg"
+                      alt="Happy homeowners"
+                      width={600}
+                      height={450}
+                      className="object-cover w-full"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Right Side - Form */}
-            <div>
-              <LandingForm />
+            <div className="lg:sticky lg:top-8">
+              <div className="relative">
+                {/* Form glow effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary-green via-emerald-500 to-blue-500 rounded-3xl blur opacity-20"></div>
+                <div className="relative">
+                  <LandingForm />
+                </div>
+              </div>
             </div>
           </div>
         </div>

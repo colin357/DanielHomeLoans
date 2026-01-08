@@ -39,19 +39,19 @@ export default function LandingForm() {
   return (
     <div className="w-full max-w-md mx-auto">
       {showSuccess ? (
-        <div className="bg-white rounded-2xl shadow-2xl p-8 text-center">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+        <div className="bg-white rounded-3xl shadow-2xl p-10 text-center border border-gray-100">
+          <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-          <p className="text-gray-600 mb-6">
+          <h3 className="text-3xl font-bold text-gray-900 mb-3">Thank You!</h3>
+          <p className="text-gray-600 text-lg mb-8 leading-relaxed">
             Your information has been submitted successfully. Daniel will contact you shortly to discuss your options.
           </p>
           <a
             href="tel:+19184029630"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-green to-emerald-600 text-white font-bold px-6 py-3 rounded-lg hover:from-primary-green-dark hover:to-emerald-700 transition-all"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-primary-green to-emerald-600 text-white font-bold px-8 py-4 rounded-xl hover:from-primary-green-dark hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -67,10 +67,22 @@ export default function LandingForm() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-2xl p-8">
+          <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-100">
+            {/* Form Header */}
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-green/10 to-emerald-500/10 px-4 py-2 rounded-full mb-4">
+                <svg className="w-4 h-4 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm font-semibold text-gray-700">Takes less than 60 seconds</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Get Your Free Quote</h3>
+              <p className="text-gray-600">Start saving on your mortgage today</p>
+            </div>
+
             <div className="space-y-5">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-bold text-gray-800 mb-2">
                   Full Name *
                 </label>
                 <input
@@ -78,13 +90,13 @@ export default function LandingForm() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition"
+                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-primary-green focus:ring-4 focus:ring-primary-green/10 outline-none transition-all text-gray-900 placeholder-gray-400"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="phone" className="block text-sm font-bold text-gray-800 mb-2">
                   Phone *
                 </label>
                 <input
@@ -92,13 +104,13 @@ export default function LandingForm() {
                   id="phone"
                   name="phone"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition"
+                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-primary-green focus:ring-4 focus:ring-primary-green/10 outline-none transition-all text-gray-900 placeholder-gray-400"
                   placeholder="(918) 555-1234"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-bold text-gray-800 mb-2">
                   Email *
                 </label>
                 <input
@@ -106,13 +118,13 @@ export default function LandingForm() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition"
+                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-primary-green focus:ring-4 focus:ring-primary-green/10 outline-none transition-all text-gray-900 placeholder-gray-400"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="income" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="income" className="block text-sm font-bold text-gray-800 mb-2">
                   Approximate Monthly Income *
                 </label>
                 <input
@@ -120,13 +132,13 @@ export default function LandingForm() {
                   id="income"
                   name="income"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition"
+                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-primary-green focus:ring-4 focus:ring-primary-green/10 outline-none transition-all text-gray-900 placeholder-gray-400"
                   placeholder="$5,000"
                 />
               </div>
 
               <div>
-                <label htmlFor="homeValue" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="homeValue" className="block text-sm font-bold text-gray-800 mb-2">
                   Approximate Home Value *
                 </label>
                 <input
@@ -134,20 +146,20 @@ export default function LandingForm() {
                   id="homeValue"
                   name="homeValue"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 outline-none transition"
+                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-primary-green focus:ring-4 focus:ring-primary-green/10 outline-none transition-all text-gray-900 placeholder-gray-400"
                   placeholder="$300,000"
                 />
               </div>
 
-              <div className="flex items-start">
+              <div className="flex items-start p-4 bg-gray-50 rounded-xl">
                 <input
                   type="checkbox"
                   id="consent"
                   name="consent"
                   required
-                  className="mt-1 mr-3 h-4 w-4 text-primary-green focus:ring-primary-green border-gray-300 rounded"
+                  className="mt-1 mr-3 h-5 w-5 text-primary-green focus:ring-2 focus:ring-primary-green border-gray-300 rounded cursor-pointer"
                 />
-                <label htmlFor="consent" className="text-sm text-gray-600">
+                <label htmlFor="consent" className="text-sm text-gray-700 leading-relaxed cursor-pointer">
                   By submitting this form, I consent to receive communications related to qualifying for a mortgage or refinance.
                 </label>
               </div>
@@ -155,15 +167,39 @@ export default function LandingForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-primary-green to-emerald-600 hover:from-primary-green-dark hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="w-full bg-gradient-to-r from-primary-green to-emerald-600 hover:from-primary-green-dark hover:to-emerald-700 text-white font-bold py-5 px-8 rounded-xl transition-all shadow-xl hover:shadow-2xl transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none text-lg"
               >
-                {isSubmitting ? 'Submitting...' : 'GET INSTANT ACCESS'}
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Submitting...
+                  </span>
+                ) : (
+                  <span className="flex items-center justify-center gap-2">
+                    GET INSTANT ACCESS
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
+                )}
               </button>
 
-              <p className="text-xs text-gray-500 text-center">
-                <a href="/privacy" className="hover:text-primary-green">Privacy Policy</a>
+              <div className="flex items-center justify-center gap-3 pt-4">
+                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <p className="text-xs text-gray-500">
+                  Your information is secure and protected
+                </p>
+              </div>
+
+              <p className="text-xs text-gray-400 text-center pt-2">
+                <a href="/privacy" className="hover:text-primary-green transition">Privacy Policy</a>
                 {' | '}
-                <a href="/terms" className="hover:text-primary-green">Terms of Service</a>
+                <a href="/terms" className="hover:text-primary-green transition">Terms of Service</a>
               </p>
             </div>
           </form>
