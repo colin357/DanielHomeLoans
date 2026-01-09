@@ -213,6 +213,8 @@ export default function MortgageCalculatorOklahoma() {
               </details>
             ))}
           </div>
+        </div>
+      </article>
 
       {/* Related Articles */}
       <section className="bg-gray-50 py-12">
