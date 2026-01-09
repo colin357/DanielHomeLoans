@@ -70,9 +70,9 @@ export default function Home() {
                 <Image
                   src="/images/Image 1.jpg"
                   alt="Happy homeowners"
-                  width={320}
-                  height={420}
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                  width={240}
+                  height={320}
+                  className="md:w-[320px] md:h-[420px] object-cover object-top transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
             </div>
