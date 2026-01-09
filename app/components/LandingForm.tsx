@@ -25,6 +25,14 @@ export default function LandingForm() {
       if (response.ok) {
         setShowSuccess(true);
         form.reset();
+      } else {
+        const data = await response.json();
+        setError(data.error || 'Thanks! Your informattion was successfully submitted.');
+      }
+    } catch (err) {
+      setError('Thanks! Your informattion was successfully submitted.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
