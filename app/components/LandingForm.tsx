@@ -125,15 +125,15 @@ export default function LandingForm() {
 
               <div>
                 <label htmlFor="income" className="block text-sm font-bold text-gray-800 mb-2">
-                  Approximate Monthly Income *
+                  Estimated Total Annual Household Income *
                 </label>
                 <input
                   type="text"
-                  id="income"
-                  name="income"
+                  id="Estimated Total Annual Household Income"
+                  name="Estimated Total Annual Household Income"
                   required
                   className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-primary-green focus:ring-4 focus:ring-primary-green/10 outline-none transition-all text-gray-900 placeholder-gray-400"
-                  placeholder="$5,000"
+                  placeholder="$50,000"
                 />
               </div>
 
@@ -145,6 +145,20 @@ export default function LandingForm() {
                   type="text"
                   id="homeValue"
                   name="homeValue"
+                  required
+                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-primary-green focus:ring-4 focus:ring-primary-green/10 outline-none transition-all text-gray-900 placeholder-gray-400"
+                  placeholder="$300,000"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="PrimaryOrSecondary" className="block text-sm font-bold text-gray-800 mb-2">
+                  Primary Residence, Secondary Home, or Investment Property *
+                </label>
+                <input
+                  type="text"
+                  id="Primary Residence, Secondary Home, or Investment Property"
+                  name="Primary Residence, Secondary Home, or Investment Property"
                   required
                   className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-primary-green focus:ring-4 focus:ring-primary-green/10 outline-none transition-all text-gray-900 placeholder-gray-400"
                   placeholder="$300,000"
