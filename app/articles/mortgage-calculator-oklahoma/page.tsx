@@ -214,20 +214,6 @@ export default function MortgageCalculatorOklahoma() {
             ))}
           </div>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Work With a Local Oklahoma Mortgage Expert</h2>
-
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Calculators provide estimates, but working with a licensed mortgage professional gives you precise numbers based on current market conditions and your unique situation. I'll help you understand all your options, compare different scenarios, and find the best path to homeownership in Oklahoma.
-          </p>
-
-          <p className="text-gray-700 leading-relaxed mb-8">
-            <Link href="/#contact" className="text-primary-green hover:text-emerald-600 font-bold">
-              Contact me today
-            </Link> to get started with your Oklahoma home purchase. Let's turn your homeownership dreams into reality.
-          </p>
-        </div>
-      </article>
-
       {/* Related Articles */}
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
