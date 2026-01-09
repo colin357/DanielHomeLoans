@@ -25,14 +25,6 @@ export default function LandingForm() {
       if (response.ok) {
         setShowSuccess(true);
         form.reset();
-      } else {
-        const data = await response.json();
-        setError(data.error || 'Failed to send message. Please try again.');
-      }
-    } catch (err) {
-      setError('Failed to send message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
