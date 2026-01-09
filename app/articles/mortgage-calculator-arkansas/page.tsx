@@ -1,16 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import MortgageCalculator from "./MortgageCalculator";
 
 export const metadata: Metadata = {
   title: "Mortgage Calculator Arkansas - Calculate Your Monthly Payment | Daniel Fowler",
   description: "Use our Arkansas mortgage calculator to estimate your monthly payment. Get accurate calculations including property taxes, insurance, and HOA fees for Arkansas homes.",
-  keywords: "mortgage calculator arkansas, arkansas mortgage calculator, home loan calculator arkansas, arkansas home payment calculator, mortgage payment calculator arkansas",
+  keywords: "mortgage calculator Arkansas, Arkansas mortgage calculator, home loan calculator Arkansas, Arkansas home payment calculator, mortgage payment calculator Arkansas",
 };
 
 export default function MortgageCalculatorArkansas() {
   return (
     <main className="min-h-screen bg-white">
+      {/* Article Header */}
       <section className="bg-gradient-to-br from-primary-green/5 via-emerald-50 to-blue-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="mb-6">
@@ -29,12 +31,39 @@ export default function MortgageCalculatorArkansas() {
         </div>
       </section>
 
+      {/* Article Content */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none">
+          {/* Introduction */}
           <p className="text-xl text-gray-700 leading-relaxed mb-8">
-            Calculating your monthly mortgage payment is the first step toward homeownership in Arkansas. Understanding what you can afford helps you shop with confidence in one of America's most affordable housing markets. In this comprehensive guide, I'll walk you through everything that goes into your monthly payment with Arkansas-specific insights.
+            Want a clearer picture of your Arkansas mortgage payment? This quick guide breaks down the main costs, shows a few local price examples, and highlights the levers that change your total. It’s designed to be scannable so you can get answers fast.
           </p>
 
+          <div className="grid gap-6 md:grid-cols-3 my-10 not-prose">
+            {[
+              {
+                title: "What you’ll pay",
+                description: "Monthly costs usually include principal, interest, taxes, insurance, and sometimes PMI/HOA.",
+              },
+              {
+                title: "Arkansas advantage",
+                description: "Home prices and taxes are typically lower than many states, helping affordability.",
+              },
+              {
+                title: "Biggest levers",
+                description: "Rate, down payment, and loan type have the largest impact on your payment.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+                <p className="text-sm font-semibold text-primary-green uppercase tracking-wide">{item.title}</p>
+                <p className="mt-2 text-gray-700">{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <MortgageCalculator />
+
+          {/* CTA Box */}
           <div className="bg-gradient-to-r from-primary-green/10 to-emerald-50 border-l-4 border-primary-green p-6 rounded-lg my-8 not-prose">
             <h3 className="text-xl font-bold text-gray-900 mb-2">Get Your Personalized Payment Quote</h3>
             <p className="text-gray-700 mb-4">
@@ -50,52 +79,65 @@ export default function MortgageCalculatorArkansas() {
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Understanding Your Mortgage Payment Components</h2>
 
-          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Property Taxes in Arkansas</h3>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Arkansas has some of the lowest property tax rates in the nation. The effective property tax rate in Arkansas is approximately 0.61% of a home's assessed value. Here's what that means for various home prices:
+            Your monthly payment is usually called PITI (plus extras if needed). Here’s the short version:
           </p>
 
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6 not-prose">
-            <h4 className="text-lg font-bold text-gray-900 mb-4">Annual Property Tax Estimates</h4>
-            <ul className="space-y-2 text-gray-700">
-              <li>• $150,000 home: ~$915/year ($76/month)</li>
-              <li>• $170,000 home: ~$1,037/year ($86/month)</li>
-              <li>• $215,000 home: ~$1,312/year ($109/month)</li>
-              <li>• $275,000 home: ~$1,678/year ($140/month)</li>
-            </ul>
+          <div className="grid gap-6 md:grid-cols-2 my-8 not-prose">
+            {[
+              {
+                title: "Principal + Interest",
+                description: "The loan amount and the cost to borrow it. Early payments lean more toward interest.",
+              },
+              {
+                title: "Property Taxes",
+                description: "Arkansas’s effective rate averages about 0.87%, with county variations.",
+              },
+              {
+                title: "Homeowners Insurance",
+                description: "Rates are higher due to weather risk. Many buyers budget $240–$290/month.",
+              },
+              {
+                title: "PMI + HOA",
+                description: "PMI applies under 20% down on conventional loans. HOA fees vary by neighborhood.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+                <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
+                <p className="mt-2 text-gray-700">{item.description}</p>
+              </div>
+            ))}
           </div>
-
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Property taxes vary by county in Arkansas. For example:
-          </p>
-          <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-            <li><strong>Pulaski County (Little Rock):</strong> Average rate around 0.64%</li>
-            <li><strong>Washington County (Fayetteville):</strong> Average rate around 0.68%</li>
-            <li><strong>Sebastian County (Fort Smith):</strong> Average rate around 0.57%</li>
-            <li><strong>Benton County:</strong> Average rate around 0.72%</li>
-          </ul>
-
-          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Homeowners Insurance</h3>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Arkansas homeowners insurance costs are moderate, with the average annual premium around $1,600-$2,000, or about $133-$167 per month. Rates vary based on location, home value, and coverage.
-          </p>
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Arkansas Home Price Overview</h2>
 
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6 not-prose">
-            <h4 className="text-lg font-bold text-gray-900 mb-4">Arkansas Median Home Prices</h4>
-            <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Statewide Median:</strong> $170,000</li>
-              <li>• <strong>Little Rock:</strong> $215,000</li>
-              <li>• <strong>Fayetteville:</strong> $275,000</li>
-              <li>• <strong>Fort Smith:</strong> $165,000</li>
-            </ul>
-          </div>
-
           <p className="text-gray-700 leading-relaxed mb-6">
-            Arkansas offers exceptional affordability compared to most of the nation, with low property taxes making homeownership even more accessible for families.
+            Arkansas stays affordable compared to many states. Here’s a quick snapshot:
           </p>
 
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6 not-prose">
+            <h4 className="text-lg font-bold text-gray-900 mb-4">Median Home Prices (Approx.)</h4>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-lg bg-white p-4 shadow-sm">
+                <p className="text-sm text-gray-500">Statewide</p>
+                <p className="text-xl font-semibold text-gray-900">$193,500</p>
+              </div>
+              <div className="rounded-lg bg-white p-4 shadow-sm">
+                <p className="text-sm text-gray-500">Arkansas City</p>
+                <p className="text-xl font-semibold text-gray-900">$225,000</p>
+              </div>
+              <div className="rounded-lg bg-white p-4 shadow-sm">
+                <p className="text-sm text-gray-500">Tulsa</p>
+                <p className="text-xl font-semibold text-gray-900">$210,000</p>
+              </div>
+              <div className="rounded-lg bg-white p-4 shadow-sm">
+                <p className="text-sm text-gray-500">Edmond</p>
+                <p className="text-xl font-semibold text-gray-900">$325,000</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Box */}
           <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg my-8 not-prose">
             <h3 className="text-xl font-bold text-gray-900 mb-2">See Your Exact Payment</h3>
             <p className="text-gray-700 mb-4">
@@ -109,70 +151,22 @@ export default function MortgageCalculatorArkansas() {
             </Link>
           </div>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Sample Payment Calculations for Arkansas</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Factors That Affect Your Payment</h2>
 
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Let's look at realistic payment examples for Arkansas home prices. These calculations assume:
-          </p>
-          <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-            <li>7% interest rate (rates vary based on credit and market conditions)</li>
-            <li>30-year fixed mortgage</li>
-            <li>0.61% property tax rate</li>
-            <li>$140/month homeowners insurance</li>
-          </ul>
-
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6 not-prose">
-            <h4 className="text-lg font-bold text-gray-900 mb-4">$170,000 Home with 10% Down ($17,000)</h4>
-            <p className="text-gray-600 mb-2">Loan Amount: $153,000</p>
-            <ul className="space-y-1 text-gray-700">
-              <li>• Principal & Interest: $1,018/month</li>
-              <li>• Property Taxes: $86/month</li>
-              <li>• Homeowners Insurance: $140/month</li>
-              <li>• PMI: $115/month</li>
-              <li className="font-bold text-primary-green pt-2">• <strong>Total Monthly Payment: $1,359</strong></li>
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm not-prose">
+            <ul className="space-y-3 text-gray-700">
+              <li><strong>Credit score:</strong> Better scores unlock lower rates.</li>
+              <li><strong>Down payment:</strong> More down lowers the loan amount and can remove PMI.</li>
+              <li><strong>Loan term:</strong> 30-year = lower payment; 15-year = lower total interest.</li>
+              <li><strong>Loan type:</strong> Conventional, FHA, VA, and USDA each price differently.</li>
             </ul>
           </div>
 
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6 not-prose">
-            <h4 className="text-lg font-bold text-gray-900 mb-4">$215,000 Home with 20% Down ($43,000)</h4>
-            <p className="text-gray-600 mb-2">Loan Amount: $172,000</p>
-            <ul className="space-y-1 text-gray-700">
-              <li>• Principal & Interest: $1,144/month</li>
-              <li>• Property Taxes: $109/month</li>
-              <li>• Homeowners Insurance: $150/month</li>
-              <li>• PMI: $0 (20% down = no PMI)</li>
-              <li className="font-bold text-primary-green pt-2">• <strong>Total Monthly Payment: $1,403</strong></li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6 not-prose">
-            <h4 className="text-lg font-bold text-gray-900 mb-4">$165,000 Home with 5% Down ($8,250)</h4>
-            <p className="text-gray-600 mb-2">Loan Amount: $156,750</p>
-            <ul className="space-y-1 text-gray-700">
-              <li>• Principal & Interest: $1,043/month</li>
-              <li>• Property Taxes: $84/month</li>
-              <li>• Homeowners Insurance: $135/month</li>
-              <li>• PMI: $118/month</li>
-              <li className="font-bold text-primary-green pt-2">• <strong>Total Monthly Payment: $1,380</strong></li>
-            </ul>
-          </div>
-
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">How Much Can You Afford in Arkansas?</h2>
-
-          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Front-End Ratio (Housing Ratio)</h3>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Your total housing payment (PITI) should not exceed 28% of your gross monthly income. For example:
-          </p>
-          <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-            <li>$40,000 annual income ($3,333/month): Maximum $933/month housing payment</li>
-            <li>$60,000 annual income ($5,000/month): Maximum $1,400/month housing payment</li>
-            <li>$80,000 annual income ($6,667/month): Maximum $1,867/month housing payment</li>
-          </ul>
-
+          {/* Final CTA */}
           <div className="bg-gradient-to-r from-primary-green to-emerald-600 text-white p-8 rounded-lg my-12 not-prose">
             <h3 className="text-2xl font-bold mb-4">Let's Calculate Your Exact Arkansas Mortgage Payment</h3>
             <p className="text-lg mb-6">
-              As a licensed mortgage professional serving Arkansas, I'll provide you with accurate payment calculations based on current rates, your credit profile, and the specific home you're considering.
+              As a licensed mortgage professional serving Arkansas, I'll provide you with accurate payment calculations based on current rates, your credit profile, and the specific home you're considering. No guesswork—just real numbers you can count on.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -182,7 +176,7 @@ export default function MortgageCalculatorArkansas() {
                 Get Your Payment Quote
               </Link>
               <Link
-                href="/articles/fha-loan-arkansas"
+                href="/articles/fha-loan-Arkansas"
                 className="bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-8 py-4 rounded-lg transition text-center"
               >
                 Learn About FHA Loans
@@ -192,46 +186,52 @@ export default function MortgageCalculatorArkansas() {
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Frequently Asked Questions</h2>
 
-          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What is the average mortgage payment in Arkansas?</h3>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            The average monthly mortgage payment in Arkansas is approximately $1,100-$1,400, significantly lower than the national average, reflecting Arkansas's affordable housing market and low property taxes.
-          </p>
-
-          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How much income do I need to buy a house in Arkansas?</h3>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            For Arkansas's median home price of $170,000 with 10% down, you'd need approximately $40,000-$45,000 in annual household income to qualify comfortably.
-          </p>
-
-          <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How do Arkansas property taxes compare to other states?</h3>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Arkansas's effective property tax rate of 0.61% is well below the national average of 1.07%, making it one of the most affordable states for property ownership.
-          </p>
-
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Work With a Local Arkansas Mortgage Expert</h2>
-
-          <p className="text-gray-700 leading-relaxed mb-8">
-            <Link href="/#contact" className="text-primary-green hover:text-emerald-600 font-bold">
-              Contact me today
-            </Link> to get started with your Arkansas home purchase. Let's turn your homeownership dreams into reality.
-          </p>
+          <div className="space-y-4">
+            {[
+              {
+                question: "Are taxes and insurance included?",
+                answer: "Most lenders escrow taxes and insurance, so they’re bundled into your monthly payment.",
+              },
+              {
+                question: "Can I buy with less than 20% down?",
+                answer: "Yes. Conventional can be as low as 3% down, FHA is 3.5%, and VA/USDA may be zero down for eligible buyers.",
+              },
+              {
+                question: "Why do payments vary so much?",
+                answer: "Rates, down payment size, credit score, and insurance costs all move the needle.",
+              },
+            ].map((item) => (
+              <details
+                key={item.question}
+                className="group rounded-xl border border-gray-200 bg-white p-5 shadow-sm"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-semibold text-gray-900">
+                  <span>{item.question}</span>
+                  <span className="ml-4 text-primary-green transition group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 text-gray-700 leading-relaxed">{item.answer}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </article>
 
+      {/* Related Articles */}
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Arkansas Mortgage Articles</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/articles/fha-loan-arkansas" className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+            <Link href="/articles/fha-loan-Arkansas" className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
               <h3 className="text-xl font-bold text-gray-900 mb-2">FHA Loans in Arkansas</h3>
               <p className="text-gray-600 mb-4">Learn about FHA loan requirements and benefits for Arkansas homebuyers.</p>
               <span className="text-primary-green font-semibold">Read More →</span>
             </Link>
-            <Link href="/articles/va-loan-arkansas" className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+            <Link href="/articles/va-loan-Arkansas" className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
               <h3 className="text-xl font-bold text-gray-900 mb-2">VA Loans in Arkansas</h3>
               <p className="text-gray-600 mb-4">Explore VA loan benefits for veterans and military members in Arkansas.</p>
               <span className="text-primary-green font-semibold">Read More →</span>
             </Link>
-            <Link href="/articles/down-payment-assistance-arkansas" className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+            <Link href="/articles/down-payment-assistance-Arkansas" className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Down Payment Assistance Arkansas</h3>
               <p className="text-gray-600 mb-4">Discover programs that help Arkansas first-time homebuyers with down payments.</p>
               <span className="text-primary-green font-semibold">Read More →</span>
