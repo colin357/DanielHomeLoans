@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import MortgageCalculator from "./MortgageCalculator";
 
 export const metadata: Metadata = {
   title: "Mortgage Calculator Oklahoma - Calculate Your Monthly Payment | Daniel Fowler",
@@ -59,6 +60,8 @@ export default function MortgageCalculatorOklahoma() {
               </div>
             ))}
           </div>
+
+          <MortgageCalculator />
 
           {/* CTA Box */}
           <div className="bg-gradient-to-r from-primary-green/10 to-emerald-50 border-l-4 border-primary-green p-6 rounded-lg my-8 not-prose">
