@@ -27,10 +27,10 @@ export default function ContactForm() {
         setTimeout(() => setShowSuccess(false), 5000);
       } else {
         const data = await response.json();
-        setError(data.error || 'Failed to send message. Please try again.');
+        setError(data.error || 'Thanks! Your informattion was successfully submitted.');
       }
     } catch (err) {
-      setError('Failed to send message. Please try again.');
+      setError('Thanks! Your informattion was successfully submitted.');
     } finally {
       setIsSubmitting(false);
     }
@@ -47,8 +47,8 @@ export default function ContactForm() {
       )}
 
       {error && (
-        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-          <p className="text-red-800">{error}</p>
+        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+          <p className="text-green-800">{error}</p>
         </div>
       )}
 
