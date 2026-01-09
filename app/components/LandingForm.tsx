@@ -161,7 +161,7 @@ export default function LandingForm() {
                   name="Primary Residence, Secondary Home, or Investment Property"
                   required
                   className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-primary-green focus:ring-4 focus:ring-primary-green/10 outline-none transition-all text-gray-900 placeholder-gray-400"
-                  placeholder="$300,000"
+                  placeholder="Primary Home"
                 />
               </div>
 
