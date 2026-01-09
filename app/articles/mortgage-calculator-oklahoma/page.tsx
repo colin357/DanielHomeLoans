@@ -151,35 +151,6 @@ export default function MortgageCalculatorOklahoma() {
             </Link>
           </div>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Sample Payment Calculations for Oklahoma</h2>
-
-          <p className="text-gray-700 leading-relaxed mb-6">
-            These examples use a 30-year fixed loan, 7% rate, 0.87% taxes, and $250/month insurance (rates vary).
-          </p>
-
-          <div className="grid gap-6 md:grid-cols-2 my-6 not-prose">
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-              <h4 className="text-lg font-bold text-gray-900 mb-2">$200,000 Home (10% Down)</h4>
-              <p className="text-gray-600 mb-4">Estimated total: <span className="font-semibold text-gray-900">$1,727/month</span></p>
-              <ul className="text-gray-700 space-y-1">
-                <li>• P&amp;I: $1,197</li>
-                <li>• Taxes: $145</li>
-                <li>• Insurance: $250</li>
-                <li>• PMI: $135</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-              <h4 className="text-lg font-bold text-gray-900 mb-2">$250,000 Home (20% Down)</h4>
-              <p className="text-gray-600 mb-4">Estimated total: <span className="font-semibold text-gray-900">$1,782/month</span></p>
-              <ul className="text-gray-700 space-y-1">
-                <li>• P&amp;I: $1,331</li>
-                <li>• Taxes: $181</li>
-                <li>• Insurance: $270</li>
-                <li>• PMI: $0</li>
-              </ul>
-            </div>
-          </div>
-
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Factors That Affect Your Payment</h2>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm not-prose">
@@ -189,36 +160,6 @@ export default function MortgageCalculatorOklahoma() {
               <li><strong>Loan term:</strong> 30-year = lower payment; 15-year = lower total interest.</li>
               <li><strong>Loan type:</strong> Conventional, FHA, VA, and USDA each price differently.</li>
             </ul>
-          </div>
-
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">How Much Can You Afford in Oklahoma?</h2>
-
-          <p className="text-gray-700 leading-relaxed mb-6">
-            A quick affordability rule: housing costs often target ~28% of gross income, and total debt near ~43%. These are guidelines, not hard limits.
-          </p>
-
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Tips for Lowering Your Monthly Payment</h2>
-
-          <div className="grid gap-6 md:grid-cols-3 my-6 not-prose">
-            {[
-              {
-                title: "Boost credit",
-                description: "Even small score gains can reduce your rate and payment.",
-              },
-              {
-                title: "Add down payment",
-                description: "Lower loan amount and reduce or remove PMI.",
-              },
-              {
-                title: "Compare programs",
-                description: "FHA, VA, and USDA options can change costs materially.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
-                <p className="mt-2 text-gray-700">{item.description}</p>
-              </div>
-            ))}
           </div>
 
           {/* Final CTA */}
