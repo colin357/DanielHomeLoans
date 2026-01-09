@@ -186,25 +186,32 @@ export default function MortgageCalculatorOklahoma() {
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Frequently Asked Questions</h2>
 
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-2">Are taxes and insurance included?</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Most lenders escrow taxes and insurance, so they’re bundled into your monthly payment.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-2">Can I buy with less than 20% down?</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Yes. Conventional can be as low as 3% down, FHA is 3.5%, and VA/USDA may be zero down for eligible buyers.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-2">Why do payments vary so much?</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Rates, down payment size, credit score, and insurance costs all move the needle.
-              </p>
-            </div>
+          <div className="space-y-4">
+            {[
+              {
+                question: "Are taxes and insurance included?",
+                answer: "Most lenders escrow taxes and insurance, so they’re bundled into your monthly payment.",
+              },
+              {
+                question: "Can I buy with less than 20% down?",
+                answer: "Yes. Conventional can be as low as 3% down, FHA is 3.5%, and VA/USDA may be zero down for eligible buyers.",
+              },
+              {
+                question: "Why do payments vary so much?",
+                answer: "Rates, down payment size, credit score, and insurance costs all move the needle.",
+              },
+            ].map((item) => (
+              <details
+                key={item.question}
+                className="group rounded-xl border border-gray-200 bg-white p-5 shadow-sm"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-semibold text-gray-900">
+                  <span>{item.question}</span>
+                  <span className="ml-4 text-primary-green transition group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 text-gray-700 leading-relaxed">{item.answer}</p>
+              </details>
+            ))}
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Work With a Local Oklahoma Mortgage Expert</h2>
